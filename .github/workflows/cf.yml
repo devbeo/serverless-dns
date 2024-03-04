@@ -109,6 +109,7 @@ jobs:
         # github.com/cloudflare/wrangler-action
         uses: cloudflare/wrangler-action@v3
         with:
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
           # input overrides env-defaults, regardless
           environment: ${{ env.WORKERS_ENV }}
